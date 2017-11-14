@@ -6,7 +6,6 @@ class Content extends Component {
   render() {
     return (
       <div className="hello">
-        {' '}
         Hello
         {this.props.text.map((obj, idx) => (
           <div key={`${obj.id}-${idx}`}>{JSON.stringify(obj)}</div>
