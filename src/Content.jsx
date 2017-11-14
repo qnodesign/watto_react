@@ -5,16 +5,18 @@ import './Content.css';
 class Content extends Component {
   render() {
     return (
-      <div className="hello">{this.props.text}</div>
+      <div className="hello">
+      	{this.props.text.map((obj,idx) => <div key={`${obj.id}-${idx}`}>{JSON.stringify(obj)}</div>)}
+      </div>
     );
   }
 }
 
 Content.propTpyes = {
-	text: PropTypes.string,
+	text: PropTypes.array,
 };
 Content.defaultProps = {
-	text: 'Hello bello',
+	text: [],
 };
 
 export default Content;
