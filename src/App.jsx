@@ -16,11 +16,11 @@ class App extends Component {
           const response2 = await fetch('https://jsonplaceholder.typicode.com/comments/10');
           const json2 = await response2.json();
           res.push(json2);
-          res.push({test: 'szeretlek anu jó éjt!!!'});
+          res.push({test: 'szeretlek anu jó éjt ma is!!!'});
           return res;
       }
 
-      request().then(data => this.setState({data}));    
+      request().then(data => this.setState({data}));
   };
 
   render() {
