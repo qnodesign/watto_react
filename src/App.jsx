@@ -4,27 +4,29 @@ import './App.css';
 import Content from './Content';
 
 class App extends Component {
-
   state = {};
 
   testFunc = () => {
-      const res = [];
-      const request = async () => {
-          const response1 = await fetch('https://jsonplaceholder.typicode.com/posts/10');
-          const json1 = await response1.json();
-          res.push(json1);
-          const response2 = await fetch('https://jsonplaceholder.typicode.com/comments/10');
-          const json2 = await response2.json();
-          res.push(json2);
-          res.push({test: 'szeretlek anu jó éjt!!!'});
-          return res;
-      }
+    const res = [];
+    const request = async () => {
+      const response1 = await fetch(
+        'https://jsonplaceholder.typicode.com/posts/10'
+      );
+      const json1 = await response1.json();
+      res.push(json1);
+      const response2 = await fetch(
+        'https://jsonplaceholder.typicode.com/comments/10'
+      );
+      const json2 = await response2.json();
+      res.push(json2);
+      res.push({ test: 'szeretlek anu jó éjt ma is!!!' });
+      return res;
+    };
 
-      request().then(data => this.setState({data}));    
+    request().then(data => this.setState({ data }));
   };
 
   render() {
-
     return (
       <div className="App">
         <header className="App-header">
